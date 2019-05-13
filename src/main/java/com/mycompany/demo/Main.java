@@ -23,7 +23,7 @@ public class Main {
         Field privateField = someClassAsClass.getDeclaredField("somePrivate");
         System.out.println(privateField.getName());
         privateField.setAccessible(true);
-        privateField.set(someObject, "Marsel");
+        privateField.set(someObject, "Alexei");
         System.out.println(someObject.getSomePrivate());
     }
 }

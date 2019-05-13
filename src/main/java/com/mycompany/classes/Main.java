@@ -23,7 +23,7 @@ public class Main {
         for (int i = 0; i < types.length; i++) {
             types[i] = fields[i].getType();
         }
-        // Object object = aClass.newInstance();
+        // Object object = aClass.newInstance();  //можем создать объект (НЕ работает если не конструктора по умолч)
         Constructor constructor = aClass.getDeclaredConstructor(types);
 
         for (Class parameterType : constructor.getParameterTypes()) {
@@ -42,5 +42,8 @@ public class Main {
         Object arguments[] = {intValue, stingValue};
         Object object = constructor.newInstance(arguments);
         System.out.println(object);
-    }
+        //в результате нигде не говориться о классе Human но мы можем с консоли создавать объект и заполнять их
+        //по-сути это маленький фреймворк.
+   }
 }
+    
